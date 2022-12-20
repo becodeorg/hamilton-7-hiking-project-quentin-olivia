@@ -1,16 +1,15 @@
 <?php
-declare(strict_types=1);
 
-abstract class Database
+class Database
 {
     private PDO $pdo;
 
     public function __construct()
     {
-        $x = 'playground-user';
-        $y = 'playground-pass1234';
         $this->pdo = new PDO(
-            'mysql:host=mysql;dbname=hikes;',$x,$y
+            'mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_DATABASE'),
+            getenv('DB_USERNAME'),
+            getenv('DB_PASSWORD')
         );
 
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
