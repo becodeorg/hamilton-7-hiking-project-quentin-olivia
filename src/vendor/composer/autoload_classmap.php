@@ -6,10 +6,14 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Auth' => $baseDir . '/app/models/auth.php',
-    'AuthController' => $baseDir . '/app/controllers/authController.php',
+    'AuthController' => $baseDir . '/app/controllers/AuthController.php',
+    'AuthModel' => $baseDir . '/app/models/authModel.php',
+    'ComposerAutoloaderInit780f342a425d0a815c15ed65497717de' => $vendorDir . '/composer/autoload_real.php',
+    'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
+    'Composer\\Autoload\\ComposerStaticInit780f342a425d0a815c15ed65497717de' => $vendorDir . '/composer/autoload_static.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Database' => $baseDir . '/app/models/database.php',
-    'Product' => $baseDir . '/app/models/hike.php',
-    'ProductController' => $baseDir . '/app/controllers/hikeController.php',
+    'Hike' => $baseDir . '/app/models/hike.php',
+    'HikeController' => $baseDir . '/app/controllers/HikeController.php',
+    'HomeController' => $baseDir . '/app/controllers/HomeController.php',
 );

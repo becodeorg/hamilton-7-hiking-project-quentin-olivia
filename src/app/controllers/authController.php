@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 class AuthController
 {
-    private Auth $authModel;
+    private AuthModel $authModel;
 
     public function __construct()
     {
-        $this->authModel = new Auth();
+        $this->authModel = new AuthModel();
     }
 
     public function register(array $input): void
@@ -37,9 +37,9 @@ class AuthController
 
     public function showRegistrationForm(): void
     {
-        include 'views/includes/header.view.php';
-        include 'views/registration.view.php';
-        include 'views/includes/footer.view.php';
+        include 'app/views/includes/header.view.php';
+        include 'app/views/registration.view.php';
+        include 'app/views/includes/footer.view.php';
     }
 
     public function login(array $input)
@@ -71,12 +71,12 @@ class AuthController
 
     public function showLoginForm()
     {
-        include 'views/includes/header.view.php';
-        include 'views/login.view.php';
-        include 'views/includes/footer.view.php';
+        include 'app/views/includes/header.view.php';
+        include 'app/views/loginForm.view.php';
+        include 'app/views/includes/footer.view.php';
     }
 
-    public function logout()
+    public function logout() : void
     {
         unset($_SESSION['user']);
 

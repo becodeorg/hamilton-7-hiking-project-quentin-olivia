@@ -7,12 +7,16 @@ namespace Composer\Autoload;
 class ComposerStaticInit780f342a425d0a815c15ed65497717de
 {
     public static $classMap = array (
-        'Auth' => __DIR__ . '/../..' . '/app/models/auth.php',
-        'AuthController' => __DIR__ . '/../..' . '/app/controllers/authController.php',
+        'AuthController' => __DIR__ . '/../..' . '/app/controllers/AuthController.php',
+        'AuthModel' => __DIR__ . '/../..' . '/app/models/authModel.php',
+        'ComposerAutoloaderInit780f342a425d0a815c15ed65497717de' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
+        'Composer\\Autoload\\ComposerStaticInit780f342a425d0a815c15ed65497717de' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Database' => __DIR__ . '/../..' . '/app/models/database.php',
-        'Product' => __DIR__ . '/../..' . '/app/models/hike.php',
-        'ProductController' => __DIR__ . '/../..' . '/app/controllers/hikeController.php',
+        'Hike' => __DIR__ . '/../..' . '/app/models/hike.php',
+        'HikeController' => __DIR__ . '/../..' . '/app/controllers/HikeController.php',
+        'HomeController' => __DIR__ . '/../..' . '/app/controllers/HomeController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
