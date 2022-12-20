@@ -8,8 +8,8 @@ $url = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $method = $_SERVER['REQUEST_METHOD'];
 
 if ($url === '/' || $url === '') {
-    $productController = new ProductController();
-    $productController->index();
+    $hikeController = new HikeController();
+    $hikeController->index();
 }
 
 /*$routes = [
@@ -41,10 +41,10 @@ if ($url === 'registration') {
     }
 }
 
-if ($url === 'product') {
+if ($url === 'hike') {
     $code = $_GET['code'];
-    $productController = new ProductController();
-    $productController->show($code);
+    $hikeController = new HikeController();
+    $hikeController->show($code);
 }
 
 if ($url === 'logout') {

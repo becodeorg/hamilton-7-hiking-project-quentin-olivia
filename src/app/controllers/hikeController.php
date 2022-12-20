@@ -2,18 +2,18 @@
 declare(strict_types=1);
 
 
-class ProductController
+class HikeController
 {
-    private Product $productModel;
+    private Hike $hikeModel;
 
     public function __construct()
     {
-        $this->productModel = new Product();
+        $this->hikeModel = new Hike();
     }
 
     public function index(): void
     {
-        $products = $this->productModel->findAll();
+        $hikes = $this->hikeModel->findAll();
 
         include 'views/includes/header.view.php';
         include 'views/index.view.php';
@@ -23,10 +23,10 @@ class ProductController
     public function show(string $code): void
     {
         if (empty($code)) {
-            throw new Exception("Product code was not provided.");
+            throw new Exception("Hike code was not provided.");
         }
 
-        $product = $this->productModel->find($code);
+        $hike = $this->hikeModel->find($code);
 
         include 'views/includes/header.view.php';
         include 'views/product.view.php';

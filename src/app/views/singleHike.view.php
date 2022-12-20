@@ -1,3 +1,5 @@
-<h2><?= $product['productName'] ?></h2>
+<h2><?= hike['hikeName'] ?></h2>
 
-<h3>Price = <?= $product['buyPrice'] ?> €</h3>
+<h3> <?= $hike[''] ?> €</h3>
+
+<h3> </h3>

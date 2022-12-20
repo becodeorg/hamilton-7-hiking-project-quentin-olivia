@@ -1,12 +1,12 @@
 <?php
 
-class Product extends Database
+class Hike extends Database
 {
     public function findAll(): array|false
     {
         try {
            return $this->query(
-                'SELECT * FROM hikes LIMIT 20'
+                'SELECT * FROM hikes LIMIT 8'
             )->fetchAll();
 
         } catch (Exception $e) {
@@ -19,7 +19,7 @@ class Product extends Database
     {
         try {
             return $this->query(
-                "SELECT * FROM hikes WHERE productCode = ?",
+                "SELECT * FROM hikes WHERE hikeCode = ?",
                 [
                     $code
                 ]
