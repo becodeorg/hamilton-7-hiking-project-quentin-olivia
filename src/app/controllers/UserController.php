@@ -2,13 +2,13 @@
 declare(strict_types=1);
 
 
-class HikeController
+class UserController
 {
-    private Hike $hikeModel;
+    private User $hikeModel;
 
     public function __construct()
     {
-        $this->hikeModel = new Hike();
+        $this->hikeModel = new User();
     }
 
     public function index(): void
