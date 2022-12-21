@@ -5,6 +5,8 @@ declare(strict_types=1);
 session_start();
 
 require 'vendor/autoload.php';
+// var_dump(getenv('DB_HOST'));
+// die();
 
 $url = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $method = $_SERVER['REQUEST_METHOD'];

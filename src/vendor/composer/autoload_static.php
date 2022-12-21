@@ -14,9 +14,10 @@ class ComposerStaticInit780f342a425d0a815c15ed65497717de
         'Composer\\Autoload\\ComposerStaticInit780f342a425d0a815c15ed65497717de' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Database' => __DIR__ . '/../..' . '/app/models/database.php',
-        'Hike' => __DIR__ . '/../..' . '/app/models/hike.php',
-        'HikeController' => __DIR__ . '/../..' . '/app/controllers/HikeController.php',
-        'HomeController' => __DIR__ . '/../..' . '/app/controllers/HomeController.php',
+        'Hike' => __DIR__ . '/../..' . '/app/models/hikeModel.php',
+        'HomeController' => __DIR__ . '/../..' . '/app/controllers/homeController.php',
+        'UserController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',
+        'UserModel' => __DIR__ . '/../..' . '/app/models/userModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
