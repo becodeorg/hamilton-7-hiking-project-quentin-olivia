@@ -2,18 +2,18 @@
 declare(strict_types=1);
 
 
-class HikeController
+class UserController
 {
-    private Hike $hikeModel;
+    private User $userModel;
 
     public function __construct()
     {
-        $this->hikeModel = new Hike();
+        $this->userModel = new User();
     }
 
     public function index(): void
     {
-        $hikes = $this->hikeModel->findAll();
+        $users = $this->userModel->findAll();
 
         include 'app/views/includes/header.view.php';
         include 'app/views/index.view.php';
@@ -23,13 +23,13 @@ class HikeController
     public function show(string $code): void
     {
         if (empty($code)) {
-            throw new Exception("Hike code was not provided.");
+            throw new Exception("User code was not provided.");
         }
 
-        $hike = $this->hikeModel->find($code);
+        $user = $this->userModel->find($code);
 
         include 'app/views/includes/header.view.php';
-        include 'app/views/singleHike.view.php';
+        include 'app/views/userProfile.view.php';
         include 'app/views/includes/footer.view.php';
     }
 }
