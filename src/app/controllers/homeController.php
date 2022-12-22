@@ -8,17 +8,16 @@ class HomeController
 
     public function getAll(){
         $this->hike = new Hike();
-        $hikes = $this->hike->findAll();
-        echo $hikes;
+        return $this->hike->findAll();
     }
 
     public function index(): void
     {
         $hikes = $this->getAll();
-        echo $hikes;
 
         include 'app/views/includes/header.view.php';
         include 'app/views/includes/navbar.view.php';
+        include 'app/views/index.view.php';
         include 'app/views/includes/footer.view.php';
     }
     

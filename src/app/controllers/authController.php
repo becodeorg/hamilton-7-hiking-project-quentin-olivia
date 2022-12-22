@@ -16,6 +16,7 @@ class AuthController
         if (empty($input['username']) || empty($input['email']) || empty($input['password'])) {
             throw new Exception('Form data not validated.');
         }
+        var_dump($input);
 
         $username = htmlspecialchars($input['username']);
         $email = filter_var($input['email'], FILTER_SANITIZE_EMAIL);
@@ -62,7 +63,8 @@ class AuthController
         $_SESSION['user'] = [
             "id" => $user["id"],
             'username' => $user['username'],
-            'email' => $user['email']
+            'email' => $user['email'],
+            'loggedIn' => 1
         ];
 
         // Then, we redirect to the home page

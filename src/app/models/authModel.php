@@ -7,7 +7,7 @@ class AuthModel extends Database
     public function create(string $username, string $email, string $password): void
     {
         if (!$this->query(
-            "INSERT INTO users(username, email, password) VALUES (?, ?, ?)",
+            "INSERT INTO users(nickname, email, password) VALUES (?, ?, ?)",
             [
                 $username,
                 $email,
@@ -21,7 +21,7 @@ class AuthModel extends Database
     public function find(string $username): array
     {
         $user = $this->query(
-            "SELECT * FROM users WHERE username = ?",
+            "SELECT * FROM users WHERE nickname = ?",
             [
                 $username
             ]
