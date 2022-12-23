@@ -14,7 +14,8 @@ return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Database' => $baseDir . '/app/models/database.php',
     'Hike' => $baseDir . '/app/models/hikeModel.php',
-    'HomeController' => $baseDir . '/app/controllers/homeController.php',
+    'HikeController' => $baseDir . '/app/controllers/HikeController.php',
+    'HomeController' => $baseDir . '/app/controllers/HomeController.php',
     'UserController' => $baseDir . '/app/controllers/UserController.php',
     'UserModel' => $baseDir . '/app/models/userModel.php',
 );

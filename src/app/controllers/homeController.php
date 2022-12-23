@@ -6,8 +6,13 @@ class HomeController
 {
     private Hike $hike;
 
-    public function getAll(){
+    public function __construct()
+    {
         $this->hike = new Hike();
+    }
+
+    public function getAll(){
+        // $this->hike = new Hike();
         return $this->hike->findAll();
     }
 

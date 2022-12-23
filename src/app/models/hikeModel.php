@@ -15,13 +15,13 @@ class Hike extends Database
         }
     }
 
-    public function find(string $code): array|false
+    public function find(string $id): array|false
     {
         try {
             return $this->query(
-                "SELECT * FROM hikes WHERE hikeCode = ?",
+                "SELECT * FROM hikes WHERE id = ?",
                 [
-                    $code
+                    $id
                 ]
             )->fetch();
 

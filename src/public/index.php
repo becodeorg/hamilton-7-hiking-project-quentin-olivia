@@ -16,6 +16,11 @@ if ($url === '/' || $url === '') {
     $homeController->index();
 }
 
+if ($url === 'hike') {
+    $hikeController = new HikeController();
+    $hikeController->getSingleHike($_GET);
+}
+
 if ($url === 'registration') {
     $authController = new AuthController();
 
